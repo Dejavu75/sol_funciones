@@ -12,7 +12,7 @@ String codigoArticulo(String codigo,[String bulto="", String atributo="", bool s
     }
     codigoArticulo+=atributo.trim();
   }
-  return codigo;
+  return codigoArticulo;
 }
 String codigoDescripcion(String codigo, String descripcion, [String bulto="", String atributo="", bool sinGuiones=false]) {
   return "${codigoArticulo(codigo,bulto,atributo,sinGuiones)} - ${descripcion.trim()}";
