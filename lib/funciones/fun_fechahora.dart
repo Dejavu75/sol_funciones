@@ -1,6 +1,13 @@
 
 import 'package:timezone/timezone.dart' as tzc;
 
+DateTime convertirSafeParser({required String fecha, DateTime? valorErroneo }) {
+  try {
+    return DateTime.parse(fecha);
+  } catch (e) {
+    return valorErroneo ?? DateTime(1980);
+  }
+ }
 DateTime convertirTZ(fecha, tz) {
   if (tz == null) {
     return fecha;
